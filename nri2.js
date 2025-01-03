@@ -55,4 +55,5 @@ app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}/tasu2.html`);
 });
 
+
 // http://localhost:3000/tasu2.html でアクセス可能

@@ -66,5 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchTasks();
 });
 
+
 // http://localhost:3000/tasu2.html でアクセス可能
 
