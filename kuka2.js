@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const tasks = await response.json();
       taskList.innerHTML = "";
       tasks.forEach((task, index) => {
-        const year = task.date.split("-")[0]; // 日付から年を抽出
-        const dayMonth = task.date.split("-").slice(1).join("/"); // 月と日を抽出
+        const year = task.date.split("-")[0]; 
+        const dayMonth = task.date.split("-").slice(1).join("/");
         const formattedTask = `${year}年 ${dayMonth} ${task.time}，${task.name}`;
 
         const li = document.createElement("li");

@@ -7,16 +7,14 @@ const app = express();
 const PORT = 3000;
 
 app.use(bodyParser.json());
-app.use(express.static(__dirname)); // 静的ファイルを提供
+app.use(express.static(__dirname)); 
 
 let tasks = [];
 
-// タスクを取得
 app.get("/tasks", (req, res) => {
   res.json(tasks);
 });
 
-// タスクを追加
 app.post("/tasks", (req, res) => {
   const { name, date, time } = req.body;
   if (!name || !date || !time) {
@@ -25,7 +23,6 @@ app.post("/tasks", (req, res) => {
 
   tasks.push({ name, date, time });
 
-  // ターミナルに追加されたタスクを出力
   const year = date.split("-")[0];
   const dayMonth = date.split("-").slice(1).join("/");
   console.log(`リストに追加: ${year}年 ${dayMonth} ${time}，${name}`);
@@ -33,14 +30,12 @@ app.post("/tasks", (req, res) => {
   res.status(201).json({ message: "Task added successfully" });
 });
 
-// タスク削除
 app.delete("/tasks/:index", (req, res) => {
   const { index } = req.params;
   if (index < 0 || index >= tasks.length) {
     return res.status(400).json({ error: "Invalid task index" });
   }
 
-  // 削除したタスクをターミナルに出力
   const removedTask = tasks.splice(index, 1)[0];
   const year = removedTask.date.split("-")[0];
   const dayMonth = removedTask.date.split("-").slice(1).join("/");
