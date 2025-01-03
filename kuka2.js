@@ -67,6 +67,4 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // http://localhost:3000/tasu2.html でアクセス可能
-// 非同期通信におけるasync/awaitの活用
-// 	HTTP deleteメソッドの使用例
-// POST
+
