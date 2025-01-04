@@ -50,5 +50,4 @@ app.listen(PORT, () => {
   console.log(`アプリケーション起動`);
 });
 
-
 // http://localhost:3000/tasu2.html でアクセス可能
