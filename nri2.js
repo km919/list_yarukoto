@@ -47,7 +47,7 @@ app.delete("/tasks/:index", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}/tasu2.html`);
+  console.log(`アプリケーション起動`);
 });
 
 
